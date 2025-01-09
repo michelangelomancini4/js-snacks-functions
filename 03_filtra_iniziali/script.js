@@ -2,12 +2,29 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
-
 // Dichiara la funzione qui.
 
+// FUNZIONE per creare nuova array
+function ifLetterPresent(namesArray, letter) {
+
+   // creazione variabile nuova array
+    let newArray = [];
+
+    // ciclo per iterazione lettere
+    for (let i = 0; i < namesArray.length; i++) {
+        
+       if ( namesArray [i][0] === letter ) {
+
+        newArray.push(namesArray[i]);
+       }
+    }
+    return newArray;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
+const presentName = ifLetterPresent(names, "A");
+console.log(presentName);
 
 
 //Risultato atteso se si passa la lettera A: ["Anna", "Adele", "Alessandra"]
